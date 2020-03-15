@@ -28,10 +28,6 @@ func NewLinkedList(nums []int) LinkedList {
 }
 
 func splitFrontBack(head *Node) (*Node, *Node) {
-	if head == nil || head.Next == nil {
-		return head, nil
-	}
-
 	slow := head
 	fast := head.Next
 	for (slow.Next != nil) && (fast != nil && fast.Next != nil) {

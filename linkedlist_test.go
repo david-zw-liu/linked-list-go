@@ -20,7 +20,6 @@ func assetLinkedList(t *testing.T, linkedList LinkedList, want []int) {
 }
 
 func TestNew(t *testing.T) {
-
 	t.Run("Create empty LinkedList", func(t *testing.T) {
 		linkedList := NewLinkedList([]int{})
 		want := []int{}
@@ -46,9 +45,9 @@ func TestSort(t *testing.T) {
 	})
 
 	t.Run("Sort numbers", func(t *testing.T) {
-		linkedList := NewLinkedList([]int{9, 7, 5, 3, 1})
+		linkedList := NewLinkedList([]int{9, 7, 5, 3, 1, 2, 4, 6, 8})
 		linkedList.Sort()
-		want := []int{1, 3, 5, 7, 9}
+		want := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
 
 		assetLinkedList(t, linkedList, want)
 	})
